@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { splitTitle } from "@/lib/splitTitle";
 import { useCallback, useRef, useState } from "react";
 import WorkModal from "@/components/WorkModal";
 import type { Work } from "@/lib/types";
@@ -52,7 +53,7 @@ export default function Works({ works }: { works: Work[] }) {
             </div>
             <div className="work-meta">
               <span className="work-cat">{w.cat}</span>
-              <span className="work-title serif">{w.title}</span>
+              <span className="work-title serif">{splitTitle(w.title)}</span>
             </div>
           </button>
         ))}

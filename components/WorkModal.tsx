@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useId, useRef } from "react";
+import { splitTitle } from "@/lib/splitTitle";
 import LineLink from "@/components/LineLink";
 import type { Work } from "@/lib/types";
 
@@ -79,7 +80,7 @@ export default function WorkModal({ work, onClose }: { work: Work; onClose: () =
             </button>
           </div>
           <span id={titleId} className="modal-title serif">
-            {work.title}
+            {splitTitle(work.title)}
           </span>
           <p className="modal-text">{work.body}</p>
           <LineLink source="work-modal" workSlug={work.slug} className="btn-line btn-modal">
