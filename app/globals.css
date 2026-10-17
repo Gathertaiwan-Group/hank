@@ -25,6 +25,9 @@ section[id]{scroll-margin-top:72px}
 .eyebrow{font-size:14px;letter-spacing:0.3em;color:#9A5B2E;font-weight:700}
 
 /* 觸控裝置：擴大小連結的點擊範圍（不影響視覺） */
+/* 內文避免最後一行只剩一個字 */
+p,li{text-wrap:pretty}
+
 .hit{position:relative}
 @media (pointer:coarse){
   .hit::after{content:"";position:absolute;left:-8px;right:-8px;top:50%;height:44px;transform:translateY(-50%)}
@@ -99,7 +102,7 @@ section[id]{scroll-margin-top:72px}
 .work-img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block}
 .work-meta{display:flex;flex-direction:column;gap:6px}
 .work-cat{font-size:13px;letter-spacing:0.15em;color:#9A5B2E;font-weight:700}
-.work-title{font-size:clamp(15px,2vw,18px);font-weight:700;line-height:1.5}
+.work-title{font-size:clamp(15px,2vw,18px);font-weight:700;line-height:1.5;text-wrap:balance}
 
 /* ===== 7.5 WorkModal ===== */
 .modal-overlay{position:fixed;inset:0;z-index:50;background:rgba(20,15,10,0.7);display:flex;align-items:center;justify-content:center;padding:20px;overscroll-behavior:contain}
@@ -111,7 +114,7 @@ section[id]{scroll-margin-top:72px}
   /* 觸控目標 ≥44px；負 margin 抵銷，維持原排版高度 */
   min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;margin:-6px -8px -6px 0}
 .modal-close:focus-visible{outline:2px solid #06C755;outline-offset:0;border-radius:4px}
-.modal-title{font-size:24px;font-weight:900;line-height:1.5}
+.modal-title{font-size:24px;font-weight:900;line-height:1.5;text-wrap:balance}
 .modal-text{margin:0;font-size:15px;line-height:1.9;color:#4A3C30;white-space:pre-line}
 .btn-modal{padding:14px 24px;font-size:16px;text-align:center;margin-top:8px}
 
