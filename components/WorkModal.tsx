@@ -83,8 +83,9 @@ export default function WorkModal({ work, onClose }: { work: Work; onClose: () =
           </span>
           <p className="modal-text">{work.body}</p>
           <LineLink source="work-modal" workSlug={work.slug} className="btn-line btn-modal">
-            我也想做這種模具 → LINE 詢問
+            我也想做類似的 → LINE 免費估價
           </LineLink>
+          <span className="reassure reassure-modal">傳訊息時可以說：「我想做類似的{work.cat}」</span>
         </div>
       </div>
     </div>

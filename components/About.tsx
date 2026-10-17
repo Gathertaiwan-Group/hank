@@ -14,13 +14,16 @@ export default function About() {
         />
         <div className="about-text">
           <span className="eyebrow">關於我們</span>
-          <h2 className="about-h2 serif">專為設計師與品牌主提供「造型模具開發」的專業團隊</h2>
+          <h2 className="about-h2 serif">
+            幫設計師與品牌，
+            <br />
+            把圖案做成模具
+          </h2>
           <p className="about-p">
-            從一張手稿、Logo、創意圖案開始，透過3D建模、模樣列印與矽膠翻模，一步步將靈感轉化為可用於食品、香氛、石膏等領域的真實商品。
+            從一張手稿、LOGO 或圖案開始，經過 3D 建模、3D 列印母模、矽膠翻模，做成能用在食品、香氛、石膏的模具。
           </p>
-          <p className="about-p">
-            我們曾與甜點品牌、觀光工廠、香氛通路、飯店禮品部門合作，也擅長協助創業者以小量客製創造差異化商品，你只要帶著想法，我們就能幫你做出你想要的「第一個模具」。
-          </p>
+          <p className="about-p">合作過甜點品牌、觀光工廠、香氛通路與飯店禮品部門，也擅長幫創業者做小量客製。</p>
+          <p className="about-p">我們的建議是：先找現成的公版模具，找不到合適的再客製。</p>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import LineLink from "@/components/LineLink";
-import { SITE_DESCRIPTION } from "@/lib/site";
+import { CTA_MAIN, CTA_REASSURE } from "@/lib/site";
 
 const TAGS = ["甜點", "冰棒", "巧克力", "慕斯蛋糕", "糖果", "肥皂", "擴香石"];
 
@@ -10,11 +10,26 @@ export default function Hero() {
       <div className="hero-text">
         <span className="eyebrow">客製化矽膠模具</span>
         <h1 className="hero-h1 serif">
-          創做屬於
+          一張手稿，
           <br />
-          你品牌的特色
+          做出品牌專屬模具
         </h1>
-        <p className="hero-p">{SITE_DESCRIPTION}</p>
+        <p className="hero-p">巧克力、甜點、冰棒、肥皂、擴香石都能做。照片或手稿就能開始，小量客製也接。</p>
+        <ul className="facts">
+          <li>
+            開發費約 <strong>3,000–5,000 元</strong>（一次性）
+          </li>
+          <li>
+            模具每個約 <strong>400–1,500 元</strong>
+          </li>
+          <li>
+            整體約 <strong>21 天</strong>寄出
+          </li>
+          <li>
+            <strong>4 個月內</strong>重做同款，不用再付開發費
+          </li>
+        </ul>
+        <p className="facts-note">實際金額依數量與難易度報價</p>
         <div className="tags">
           {TAGS.map((t) => (
             <span key={t} className="tag">
@@ -23,9 +38,12 @@ export default function Hero() {
           ))}
         </div>
         <div className="hero-ctas">
-          <LineLink source="hero" className="btn-line btn-hero">
-            加入 LINE@ 免費構圖 →
-          </LineLink>
+          <div className="cta-stack">
+            <LineLink source="hero" className="btn-line btn-hero">
+              {CTA_MAIN} →
+            </LineLink>
+            <span className="reassure">{CTA_REASSURE}</span>
+          </div>
           <a href="#works" className="link-under hit">
             先看作品
           </a>
@@ -45,7 +63,7 @@ export default function Hero() {
         <div className="hero-card">
           有想法就好 —
           <br />
-          <strong>我們免費幫您生成構圖</strong>
+          <strong>傳張照片或手稿，先拿報價</strong>
         </div>
       </div>
     </section>

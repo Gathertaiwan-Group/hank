@@ -1,15 +1,16 @@
 import LineLink from "@/components/LineLink";
+import { CTA_MAIN } from "@/lib/site";
 
 export default function CtaBand() {
   return (
-    <section className="band" aria-label="免費構圖">
+    <section className="band" aria-label="傳圖估價">
       <div className="band-inner safe-x">
         <div className="band-text">
-          <span className="band-title serif">想提升品牌競爭力？</span>
-          <span className="band-sub">傳一張手稿或 Logo 給我們，免費幫您生成構圖。</span>
+          <span className="band-title serif">只有手稿，也能開模</span>
+          <span className="band-sub">傳照片或手稿到 LINE，標上長、寬、高、厚度，就能先拿報價。</span>
         </div>
         <LineLink source="band" className="btn-white">
-          LINE 傳給我們 →
+          {CTA_MAIN} →
         </LineLink>
       </div>
     </section>

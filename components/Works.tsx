@@ -23,13 +23,9 @@ export default function Works({ works }: { works: Work[] }) {
       <div className="works-head">
         <div className="sec-title">
           <span className="eyebrow">作品集</span>
-          <h2 className="h2 h2-works serif">
-            一個模具，
-            <br />
-            讓你與市場徹底區隔
-          </h2>
+          <h2 className="h2 h2-works serif">做過的客製模具</h2>
         </div>
-        <p className="works-desc">品牌標誌、圖騰紋樣、角色或主題造型，都能細緻還原。點擊作品看完整介紹。</p>
+        <p className="works-desc">品牌 LOGO、圖騰、角色或主題造型都能做。點開作品看用途和可以客製的地方。</p>
       </div>
       <div className="works-grid">
         {works.map((w, i) => (

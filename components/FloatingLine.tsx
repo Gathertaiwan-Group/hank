@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import LineLink from "@/components/LineLink";
+import { CTA_MAIN } from "@/lib/site";
 
 /** 進入 #contact 區時自動隱藏，避免遮住主 CTA 與版權（該區已有更大的 LINE 主鈕） */
 export default function FloatingLine({ show = true }: { show?: boolean }) {
@@ -23,11 +24,15 @@ export default function FloatingLine({ show = true }: { show?: boolean }) {
     <LineLink
       source="floating"
       className={`btn-line float-line${hidden ? " is-hidden" : ""}`}
-      aria-label="加入 LINE 免費諮詢"
+      aria-label={CTA_MAIN}
       aria-hidden={hidden || undefined}
       tabIndex={hidden ? -1 : undefined}
     >
-      LINE
+      <span aria-hidden="true">
+        LINE
+        <br />
+        估價
+      </span>
     </LineLink>
   );
 }

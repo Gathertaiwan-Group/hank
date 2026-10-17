@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     url: "/",
-    images: [{ url: "/images/hero.jpeg", width: 1024, height: 1024, alt: "客製化矽膠模具" }],
+    images: [{ url: "/images/hero.jpeg", width: 1024, height: 1024, alt: "Hank 藝術模具的客製矽膠模具作品" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -16,7 +16,7 @@ export default function Header() {
             <a href="#faq" className="hit">常見問題</a>
           </div>
           <LineLink source="header" className="btn-line btn-header">
-            LINE 免費諮詢
+            LINE 免費估價
           </LineLink>
         </nav>
       </div>
