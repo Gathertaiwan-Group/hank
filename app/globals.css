@@ -1,4 +1,6 @@
 /* ===== 全域（README §5，數值不可改） ===== */
+/* 字型堆疊：本站用字子集 → Google 完整字型分片（缺字才抓）→ 系統字（見 app/layout.tsx） */
+:root{--font-sans:var(--font-sans-subset),var(--font-sans-full);--font-serif:var(--font-serif-subset),var(--font-serif-full)}
 html{scroll-behavior:smooth}
 body{margin:0;background:#F6F1EA;color:#2A211B;font-family:var(--font-sans),'Noto Sans TC',sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#2A211B;text-decoration:none}

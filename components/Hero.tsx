@@ -38,6 +38,7 @@ export default function Hero() {
           width={1024}
           height={1024}
           priority
+          fetchPriority="high"
           sizes="(max-width: 940px) calc(100vw - 40px), 572px"
           className="hero-img"
         />

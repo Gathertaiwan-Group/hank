@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-inner safe-x">
-        <a href="#top" className="logo hit" aria-label="Hank 藝術模具 回到頂端">
+        <a href="#top" className="logo hit">
           <span className="logo-zh serif">Hank 藝術模具</span>
           <span className="logo-en">HANK ART MOLDS</span>
         </a>
