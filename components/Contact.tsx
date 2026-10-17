@@ -16,9 +16,6 @@ export default function Contact() {
         </LineLink>
         <div className="contact-info">
           <span>工作時間：平日一到五 09:30–20:30</span>
-          <a href="tel:0921967841" className="tel hit">
-            0921-967-841
-          </a>
         </div>
         <span className="copyright">© 2025 Hank 藝術模具</span>
       </div>

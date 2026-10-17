@@ -143,7 +143,6 @@ section[id]{scroll-margin-top:72px}
 .contact-p{margin:0;font-size:17px;line-height:1.8;color:#CFC2B0}
 .btn-contact{padding:18px 32px;font-size:clamp(17px,4vw,20px);margin-top:8px;box-shadow:0 10px 30px rgba(6,199,85,0.35)}
 .contact-info{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 36px;margin-top:40px;padding-top:28px;border-top:1px solid #4A3C30;width:100%;font-size:15px;color:#CFC2B0}
-.tel,.tel:hover{color:#F6F1EA}
 .copyright{font-size:13px;color:#8C7C6A}
 /* iOS Home Indicator：底部加 safe-area（一般裝置為 0，維持 48px）
    浮動 LINE 鈕在 Contact 進入視窗時自動隱藏（見 FloatingLine），不會遮住主 CTA 與版權 */
