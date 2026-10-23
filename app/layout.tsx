@@ -1,23 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Sans_TC, Noto_Serif_TC } from "next/font/google";
+import { Noto_Sans_TC } from "next/font/google";
 import localFont from "next/font/local";
-import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/site";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE } from "@/lib/site";
 import "./globals.css";
 
 /**
  * 字型策略（Lighthouse Mobile Performance）：
- * 1. 先用「只含本站用字」的子集（app/fonts，scripts/subset-fonts.mjs 產生，合計約 180KB，preload）。
+ * 1. 先用「只含本站用字」的子集（app/fonts，scripts/subset-fonts.mjs 產生，preload）。
  * 2. 子集缺字時才退回 Google 完整字型的 unicode-range 分片（不 preload，只抓缺字所在分片）。
  * 原本直接用 Google 分片，整頁要抓 ~28 片、約 2.1MB，FCP/LCP 被拖到 11 秒。
+ *
+ * 標題用圓體 Chiron GoRound TC 700（對齊模怪獸品牌「圓潤厚實」字感）；它不在 next/font/google
+ * 清單內，所以標題缺字時退回 Noto Sans TC（見 globals.css 的 --font-display 堆疊）。
  */
-const serifSubset = localFont({
-  src: [
-    { path: "./fonts/noto-serif-tc-700.woff2", weight: "700", style: "normal" },
-    { path: "./fonts/noto-serif-tc-900.woff2", weight: "900", style: "normal" },
-  ],
+const displaySubset = localFont({
+  src: [{ path: "./fonts/chiron-goround-tc-700.woff2", weight: "700", style: "normal" }],
   display: "swap",
   adjustFontFallback: false,
-  variable: "--font-serif-subset",
+  variable: "--font-display-subset",
 });
 
 const sansSubset = localFont({
@@ -30,13 +30,12 @@ const sansSubset = localFont({
   variable: "--font-sans-subset",
 });
 
-const serif = Noto_Serif_TC({
-  weight: ["700", "900"],
-  subsets: ["latin"],
+/** 手寫標語「Mogu Your Idea!」：只含這幾個字母，約 7KB，不 preload（在頁尾） */
+const hand = localFont({
+  src: [{ path: "./fonts/caveat-600.woff2", weight: "600", style: "normal" }],
   display: "swap",
   preload: false,
-  adjustFontFallback: false,
-  variable: "--font-serif-full",
+  variable: "--font-hand",
 });
 
 const sans = Noto_Sans_TC({
@@ -62,17 +61,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "zh_TW",
-    siteName: "Hank 藝術模具",
+    siteName: SITE_NAME,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     url: "/",
-    images: [{ url: "/images/hero.jpeg", width: 1024, height: 1024, alt: "Hank 藝術模具的客製矽膠模具作品" }],
+    images: [{ url: "/brand/og.png", width: 1200, height: 630, alt: "模怪獸 MOGUMOLD 客製化矽膠模具開發" }],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/images/hero.jpeg"],
+    images: ["/brand/og.png"],
   },
   formatDetection: { telephone: false },
 };
@@ -81,12 +80,12 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#F6F1EA",
+  themeColor: "#F7F5EF",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-Hant-TW" className={`${serifSubset.variable} ${sansSubset.variable} ${serif.variable} ${sans.variable}`}>
+    <html lang="zh-Hant-TW" className={`${displaySubset.variable} ${sansSubset.variable} ${hand.variable} ${sans.variable}`}>
       <body>{children}</body>
     </html>
   );

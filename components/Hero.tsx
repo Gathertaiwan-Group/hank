@@ -9,10 +9,10 @@ export default function Hero() {
     <section id="top" className="hero safe-x">
       <div className="hero-text">
         <span className="eyebrow">客製化矽膠模具</span>
-        <h1 className="hero-h1 serif">
+        <h1 className="hero-h1 display">
           一張手稿，
           <br />
-          做出品牌專屬模具
+          做出<span className="mark">品牌專屬</span>模具
         </h1>
         <p className="hero-p">巧克力、甜點、冰棒、肥皂、擴香石都能做。照片或手稿就能開始，小量客製也接。</p>
         <ul className="facts">
@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
         <div className="hero-ctas">
           <div className="cta-stack">
-            <LineLink source="hero" className="btn-line btn-hero">
+            <LineLink source="hero" className="btn-cta btn-hero">
               {CTA_MAIN} →
             </LineLink>
             <span className="reassure">{CTA_REASSURE}</span>
@@ -63,7 +63,7 @@ export default function Hero() {
         <div className="hero-card">
           有想法就好 —
           <br />
-          <strong>傳張照片或手稿，先拿報價</strong>
+          <strong>傳張圖片，聊聊你的模具想法</strong>
         </div>
       </div>
     </section>

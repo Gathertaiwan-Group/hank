@@ -23,6 +23,7 @@ export default function FloatingLine({ show = true }: { show?: boolean }) {
   return (
     <LineLink
       source="floating"
+      icon={false}
       className={`btn-line float-line${hidden ? " is-hidden" : ""}`}
       aria-label={CTA_MAIN}
       aria-hidden={hidden || undefined}

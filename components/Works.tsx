@@ -24,7 +24,7 @@ export default function Works({ works }: { works: Work[] }) {
       <div className="works-head">
         <div className="sec-title">
           <span className="eyebrow">作品集</span>
-          <h2 className="h2 h2-works serif">做過的客製模具</h2>
+          <h2 className="h2 h2-works display">做過的客製模具</h2>
         </div>
         <p className="works-desc">品牌 LOGO、圖騰、角色或主題造型都能做。點開作品看用途和可以客製的地方。</p>
       </div>
@@ -53,7 +53,7 @@ export default function Works({ works }: { works: Work[] }) {
             </div>
             <div className="work-meta">
               <span className="work-cat">{w.cat}</span>
-              <span className="work-title serif">{splitTitle(w.title)}</span>
+              <span className="work-title display">{splitTitle(w.title)}</span>
             </div>
           </button>
         ))}

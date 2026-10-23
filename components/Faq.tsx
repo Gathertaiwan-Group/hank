@@ -71,7 +71,7 @@ export default function Faq() {
     <section id="faq" className="sec safe-x">
       <div className="faq-head">
         <span className="eyebrow">常見問題</span>
-        <h2 className="h2 serif">下單前你可能想知道</h2>
+        <h2 className="h2 display">下單前你可能想知道</h2>
       </div>
       <div className="faq-layout">
         <div className="faq-list">
@@ -83,7 +83,7 @@ export default function Faq() {
           ))}
           <div className="faq-cta">
             <span className="sec-cta-title">還有其他問題？</span>
-            <LineLink source="faq" className="btn-line btn-sec">
+            <LineLink source="faq" className="btn-cta btn-sec">
               LINE 直接問 →
             </LineLink>
             <span className="reassure">服務時間：平日 09:30–20:30</span>

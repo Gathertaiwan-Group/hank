@@ -16,7 +16,7 @@ export default function Process() {
     <section id="process" className="sec safe-x">
       <div className="process-head">
         <span className="eyebrow">服務流程</span>
-        <h2 className="h2 h2-balance serif">
+        <h2 className="h2 h2-balance display">
           從傳圖到收到模具：
           <br />5 個步驟
         </h2>
@@ -24,7 +24,7 @@ export default function Process() {
       <ol className="steps">
         {STEPS.map((s, i) => (
           <li key={s.no} className="step">
-            <span className={`step-no serif${i === 0 ? " first" : ""}`}>{s.no}</span>
+            <span className={`step-no display${i === 0 ? " first" : ""}`}>{s.no}</span>
             <span className="step-title">{s.title}</span>
             <span className="step-desc">{s.desc}</span>
           </li>
@@ -32,7 +32,7 @@ export default function Process() {
       </ol>
       <div className="sec-cta">
         <span className="sec-cta-title">第 2 步可以現在就開始</span>
-        <LineLink source="process" className="btn-line btn-sec">
+        <LineLink source="process" className="btn-cta btn-sec">
           {CTA_MAIN} →
         </LineLink>
         <span className="reassure">估價免費，確認報價後才付訂金</span>
