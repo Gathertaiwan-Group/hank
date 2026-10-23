@@ -64,8 +64,9 @@ p,li{text-wrap:pretty}
 .line-ico{width:22px;height:22px;flex-shrink:0;display:block}
 
 /* LINE 綠（只給浮動鈕，維持一眼認出是 LINE） */
-.btn-line{background:var(--line-green);color:#fff;border-radius:999px;font-weight:700}
-.btn-line:hover{background:#05B04B;color:#fff}
+/* LINE 綠底配白字只有 2.3:1，改深石墨藍字（6.4:1） */
+.btn-line{background:var(--line-green);color:var(--ink);border-radius:999px;font-weight:700}
+.btn-line:hover{background:#05B04B;color:var(--ink)}
 
 /* ===== Header ===== */
 .header{position:sticky;top:0;z-index:20;background:rgba(247,245,239,0.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
