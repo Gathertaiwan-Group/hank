@@ -84,7 +84,10 @@ export default function WorkModal({ work, onClose }: { work: Work; onClose: () =
           </span>
           <p className="modal-text">{work.body}</p>
           <LineLink source="work-modal" workSlug={work.slug} className="btn-cta btn-modal">
-            我也想做類似的 → LINE 免費估價
+            <span>
+              我也想做類似的 →{" "}
+              <span className="nb">LINE 免費估價</span>
+            </span>
           </LineLink>
           <span className="reassure reassure-modal">傳訊息時可以說：「我想做類似的{work.cat}」</span>
         </div>
